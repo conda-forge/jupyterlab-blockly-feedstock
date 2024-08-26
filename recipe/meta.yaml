@@ -1,5 +1,5 @@
 {% set name = "jupyterlab-blockly" %}
-{% set version = "0.2.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyterlab_blockly-{{ version }}.tar.gz
-  sha256: f8cb9ae50969326773373e3282d04439250aa1299b09d96513203d99f8c5906b
+  sha256: eb008cf49cd6ec9372dd6555a4dcc0ab69c86b6adcb219e9299351d6f2cc0c61
 
 build:
   noarch: python
