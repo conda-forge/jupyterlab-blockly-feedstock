@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyterlab_blockly-{{ version }}.tar.gz
+  url: https://github.com/QuantStack/jupyterlab-blockly/archive/{{ version }}.tar.gz
   sha256: eb008cf49cd6ec9372dd6555a4dcc0ab69c86b6adcb219e9299351d6f2cc0c61
 
 build:
