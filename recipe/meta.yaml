@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyterlab_blockly-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jupyterlab_blockly-{{ version }}.tar.gz
   sha256: 0737bfbba9f2c7dbde28475e9d269419254a49974873d0de2fdc94134c69f7f2
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - jupyter-packaging
     - pip
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling >=1.5.0
     - hatch-nodejs-version >=0.3.2
     - hatch-jupyter-builder
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - jupyterlab_widgets ~=3.0.11
 
 test:
@@ -33,6 +33,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/quantstack/jupyterlab-blockly
